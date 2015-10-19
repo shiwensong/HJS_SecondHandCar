@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		156FF6AF1BD4E4B300D37EB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6AE1BD4E4B300D37EB4 /* main.m */; };
+		156FF6B81BD4E4B300D37EB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156FF6B61BD4E4B300D37EB4 /* Main.storyboard */; };
+		156FF6BA1BD4E4B300D37EB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156FF6B91BD4E4B300D37EB4 /* Images.xcassets */; };
+		156FF6BD1BD4E4B300D37EB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156FF6BB1BD4E4B300D37EB4 /* LaunchScreen.xib */; };
+		156FF6C91BD4E4B300D37EB4 /* HJS_SecondHandCarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6C81BD4E4B300D37EB4 /* HJS_SecondHandCarTests.m */; };
+		156FF6F41BD4E52A00D37EB4 /* HJSBuyCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6D81BD4E52A00D37EB4 /* HJSBuyCarViewController.m */; };
+		156FF6F51BD4E52A00D37EB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6DB1BD4E52A00D37EB4 /* AppDelegate.m */; };
+		156FF6F61BD4E52A00D37EB4 /* HJSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6E11BD4E52A00D37EB4 /* HJSMineViewController.m */; };
+		156FF6F71BD4E52A00D37EB4 /* HJSSellCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6E71BD4E52A00D37EB4 /* HJSSellCarViewController.m */; };
+		156FF6F81BD4E52A00D37EB4 /* HJSStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6ED1BD4E52A00D37EB4 /* HJSStrategyViewController.m */; };
+		156FF6F91BD4E52A00D37EB4 /* HJSToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6F31BD4E52A00D37EB4 /* HJSToolViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		156FF6C31BD4E4B300D37EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 156FF6A11BD4E4B300D37EB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 156FF6A81BD4E4B300D37EB4;
+			remoteInfo = HJS_SecondHandCar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		156FF6A91BD4E4B300D37EB4 /* HJS_SecondHandCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJS_SecondHandCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		156FF6AD1BD4E4B300D37EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		156FF6AE1BD4E4B300D37EB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		156FF6B71BD4E4B300D37EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		156FF6B91BD4E4B300D37EB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		156FF6BC1BD4E4B300D37EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		156FF6C21BD4E4B300D37EB4 /* HJS_SecondHandCarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HJS_SecondHandCarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		156FF6C71BD4E4B300D37EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		156FF6C81BD4E4B300D37EB4 /* HJS_SecondHandCarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJS_SecondHandCarTests.m; sourceTree = "<group>"; };
+		156FF6D71BD4E52A00D37EB4 /* HJSBuyCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSBuyCarViewController.h; sourceTree = "<group>"; };
+		156FF6D81BD4E52A00D37EB4 /* HJSBuyCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSBuyCarViewController.m; sourceTree = "<group>"; };
+		156FF6DA1BD4E52A00D37EB4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		156FF6DB1BD4E52A00D37EB4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		156FF6E01BD4E52A00D37EB4 /* HJSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSMineViewController.h; sourceTree = "<group>"; };
+		156FF6E11BD4E52A00D37EB4 /* HJSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSMineViewController.m; sourceTree = "<group>"; };
+		156FF6E61BD4E52A00D37EB4 /* HJSSellCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSSellCarViewController.h; sourceTree = "<group>"; };
+		156FF6E71BD4E52A00D37EB4 /* HJSSellCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSSellCarViewController.m; sourceTree = "<group>"; };
+		156FF6EC1BD4E52A00D37EB4 /* HJSStrategyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSStrategyViewController.h; sourceTree = "<group>"; };
+		156FF6ED1BD4E52A00D37EB4 /* HJSStrategyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSStrategyViewController.m; sourceTree = "<group>"; };
+		156FF6F21BD4E52A00D37EB4 /* HJSToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSToolViewController.h; sourceTree = "<group>"; };
+		156FF6F31BD4E52A00D37EB4 /* HJSToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSToolViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		156FF6A61BD4E4B300D37EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		156FF6BF1BD4E4B300D37EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		156FF6A01BD4E4B300D37EB4 = {
+			isa = PBXGroup;
+			children = (
+				156FF6AB1BD4E4B300D37EB4 /* HJS_SecondHandCar */,
+				156FF6C51BD4E4B300D37EB4 /* HJS_SecondHandCarTests */,
+				156FF6AA1BD4E4B300D37EB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		156FF6AA1BD4E4B300D37EB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6A91BD4E4B300D37EB4 /* HJS_SecondHandCar.app */,
+				156FF6C21BD4E4B300D37EB4 /* HJS_SecondHandCarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		156FF6AB1BD4E4B300D37EB4 /* HJS_SecondHandCar */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6D21BD4E52A00D37EB4 /* Basic */,
+				156FF6D31BD4E52A00D37EB4 /* BuyCar */,
+				156FF6D91BD4E52A00D37EB4 /* Main */,
+				156FF6DC1BD4E52A00D37EB4 /* Mine */,
+				156FF6E21BD4E52A00D37EB4 /* SellCar */,
+				156FF6E81BD4E52A00D37EB4 /* Strategy */,
+				156FF6EE1BD4E52A00D37EB4 /* Tool */,
+				156FF6B91BD4E4B300D37EB4 /* Images.xcassets */,
+				156FF6BB1BD4E4B300D37EB4 /* LaunchScreen.xib */,
+				156FF6AC1BD4E4B300D37EB4 /* Supporting Files */,
+			);
+			path = HJS_SecondHandCar;
+			sourceTree = "<group>";
+		};
+		156FF6AC1BD4E4B300D37EB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6AD1BD4E4B300D37EB4 /* Info.plist */,
+				156FF6AE1BD4E4B300D37EB4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		156FF6C51BD4E4B300D37EB4 /* HJS_SecondHandCarTests */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6C81BD4E4B300D37EB4 /* HJS_SecondHandCarTests.m */,
+				156FF6C61BD4E4B300D37EB4 /* Supporting Files */,
+			);
+			path = HJS_SecondHandCarTests;
+			sourceTree = "<group>";
+		};
+		156FF6C61BD4E4B300D37EB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6C71BD4E4B300D37EB4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		156FF6D21BD4E52A00D37EB4 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		156FF6D31BD4E52A00D37EB4 /* BuyCar */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6D41BD4E52A00D37EB4 /* Model */,
+				156FF6D51BD4E52A00D37EB4 /* View */,
+				156FF6D61BD4E52A00D37EB4 /* ViewController */,
+			);
+			path = BuyCar;
+			sourceTree = "<group>";
+		};
+		156FF6D41BD4E52A00D37EB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		156FF6D51BD4E52A00D37EB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		156FF6D61BD4E52A00D37EB4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6D71BD4E52A00D37EB4 /* HJSBuyCarViewController.h */,
+				156FF6D81BD4E52A00D37EB4 /* HJSBuyCarViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		156FF6D91BD4E52A00D37EB4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6B61BD4E4B300D37EB4 /* Main.storyboard */,
+				156FF6DA1BD4E52A00D37EB4 /* AppDelegate.h */,
+				156FF6DB1BD4E52A00D37EB4 /* AppDelegate.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		156FF6DC1BD4E52A00D37EB4 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6DD1BD4E52A00D37EB4 /* Model */,
+				156FF6DE1BD4E52A00D37EB4 /* View */,
+				156FF6DF1BD4E52A00D37EB4 /* ViewController */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		156FF6DD1BD4E52A00D37EB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		156FF6DE1BD4E52A00D37EB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		156FF6DF1BD4E52A00D37EB4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6E01BD4E52A00D37EB4 /* HJSMineViewController.h */,
+				156FF6E11BD4E52A00D37EB4 /* HJSMineViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		156FF6E21BD4E52A00D37EB4 /* SellCar */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6E31BD4E52A00D37EB4 /* Model */,
+				156FF6E41BD4E52A00D37EB4 /* View */,
+				156FF6E51BD4E52A00D37EB4 /* ViewController */,
+			);
+			path = SellCar;
+			sourceTree = "<group>";
+		};
+		156FF6E31BD4E52A00D37EB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		156FF6E41BD4E52A00D37EB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		156FF6E51BD4E52A00D37EB4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6E61BD4E52A00D37EB4 /* HJSSellCarViewController.h */,
+				156FF6E71BD4E52A00D37EB4 /* HJSSellCarViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		156FF6E81BD4E52A00D37EB4 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6E91BD4E52A00D37EB4 /* Model */,
+				156FF6EA1BD4E52A00D37EB4 /* View */,
+				156FF6EB1BD4E52A00D37EB4 /* ViewController */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		156FF6E91BD4E52A00D37EB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		156FF6EA1BD4E52A00D37EB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		156FF6EB1BD4E52A00D37EB4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6EC1BD4E52A00D37EB4 /* HJSStrategyViewController.h */,
+				156FF6ED1BD4E52A00D37EB4 /* HJSStrategyViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		156FF6EE1BD4E52A00D37EB4 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6EF1BD4E52A00D37EB4 /* Model */,
+				156FF6F01BD4E52A00D37EB4 /* View */,
+				156FF6F11BD4E52A00D37EB4 /* ViewController */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		156FF6EF1BD4E52A00D37EB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		156FF6F01BD4E52A00D37EB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		156FF6F11BD4E52A00D37EB4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				156FF6F21BD4E52A00D37EB4 /* HJSToolViewController.h */,
+				156FF6F31BD4E52A00D37EB4 /* HJSToolViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		156FF6A81BD4E4B300D37EB4 /* HJS_SecondHandCar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 156FF6CC1BD4E4B300D37EB4 /* Build configuration list for PBXNativeTarget "HJS_SecondHandCar" */;
+			buildPhases = (
+				156FF6A51BD4E4B300D37EB4 /* Sources */,
+				156FF6A61BD4E4B300D37EB4 /* Frameworks */,
+				156FF6A71BD4E4B300D37EB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HJS_SecondHandCar;
+			productName = HJS_SecondHandCar;
+			productReference = 156FF6A91BD4E4B300D37EB4 /* HJS_SecondHandCar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		156FF6C11BD4E4B300D37EB4 /* HJS_SecondHandCarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 156FF6CF1BD4E4B300D37EB4 /* Build configuration list for PBXNativeTarget "HJS_SecondHandCarTests" */;
+			buildPhases = (
+				156FF6BE1BD4E4B300D37EB4 /* Sources */,
+				156FF6BF1BD4E4B300D37EB4 /* Frameworks */,
+				156FF6C01BD4E4B300D37EB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				156FF6C41BD4E4B300D37EB4 /* PBXTargetDependency */,
+			);
+			name = HJS_SecondHandCarTests;
+			productName = HJS_SecondHandCarTests;
+			productReference = 156FF6C21BD4E4B300D37EB4 /* HJS_SecondHandCarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		156FF6A11BD4E4B300D37EB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = tens;
+				TargetAttributes = {
+					156FF6A81BD4E4B300D37EB4 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					156FF6C11BD4E4B300D37EB4 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 156FF6A81BD4E4B300D37EB4;
+					};
+				};
+			};
+			buildConfigurationList = 156FF6A41BD4E4B300D37EB4 /* Build configuration list for PBXProject "HJS_SecondHandCar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 156FF6A01BD4E4B300D37EB4;
+			productRefGroup = 156FF6AA1BD4E4B300D37EB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				156FF6A81BD4E4B300D37EB4 /* HJS_SecondHandCar */,
+				156FF6C11BD4E4B300D37EB4 /* HJS_SecondHandCarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		156FF6A71BD4E4B300D37EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				156FF6B81BD4E4B300D37EB4 /* Main.storyboard in Resources */,
+				156FF6BD1BD4E4B300D37EB4 /* LaunchScreen.xib in Resources */,
+				156FF6BA1BD4E4B300D37EB4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		156FF6C01BD4E4B300D37EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		156FF6A51BD4E4B300D37EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				156FF6F41BD4E52A00D37EB4 /* HJSBuyCarViewController.m in Sources */,
+				156FF6F91BD4E52A00D37EB4 /* HJSToolViewController.m in Sources */,
+				156FF6F71BD4E52A00D37EB4 /* HJSSellCarViewController.m in Sources */,
+				156FF6AF1BD4E4B300D37EB4 /* main.m in Sources */,
+				156FF6F81BD4E52A00D37EB4 /* HJSStrategyViewController.m in Sources */,
+				156FF6F51BD4E52A00D37EB4 /* AppDelegate.m in Sources */,
+				156FF6F61BD4E52A00D37EB4 /* HJSMineViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		156FF6BE1BD4E4B300D37EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				156FF6C91BD4E4B300D37EB4 /* HJS_SecondHandCarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		156FF6C41BD4E4B300D37EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 156FF6A81BD4E4B300D37EB4 /* HJS_SecondHandCar */;
+			targetProxy = 156FF6C31BD4E4B300D37EB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		156FF6B61BD4E4B300D37EB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				156FF6B71BD4E4B300D37EB4 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		156FF6BB1BD4E4B300D37EB4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				156FF6BC1BD4E4B300D37EB4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		156FF6CA1BD4E4B300D37EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		156FF6CB1BD4E4B300D37EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		156FF6CD1BD4E4B300D37EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HJS_SecondHandCar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		156FF6CE1BD4E4B300D37EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HJS_SecondHandCar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		156FF6D01BD4E4B300D37EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HJS_SecondHandCarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HJS_SecondHandCar.app/HJS_SecondHandCar";
+			};
+			name = Debug;
+		};
+		156FF6D11BD4E4B300D37EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HJS_SecondHandCarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HJS_SecondHandCar.app/HJS_SecondHandCar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		156FF6A41BD4E4B300D37EB4 /* Build configuration list for PBXProject "HJS_SecondHandCar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				156FF6CA1BD4E4B300D37EB4 /* Debug */,
+				156FF6CB1BD4E4B300D37EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		156FF6CC1BD4E4B300D37EB4 /* Build configuration list for PBXNativeTarget "HJS_SecondHandCar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				156FF6CD1BD4E4B300D37EB4 /* Debug */,
+				156FF6CE1BD4E4B300D37EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		156FF6CF1BD4E4B300D37EB4 /* Build configuration list for PBXNativeTarget "HJS_SecondHandCarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				156FF6D01BD4E4B300D37EB4 /* Debug */,
+				156FF6D11BD4E4B300D37EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 156FF6A11BD4E4B300D37EB4 /* Project object */;
+}
