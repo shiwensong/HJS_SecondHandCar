@@ -21,6 +21,7 @@
 		156FF6FE1BD4EC9000D37EB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156FF6FD1BD4EC9000D37EB4 /* Images.xcassets */; };
 		156FF7011BD4EE9400D37EB4 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7001BD4EE9400D37EB4 /* BasicViewController.m */; };
 		156FF7051BD4FBDE00D37EB4 /* HJSMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7041BD4FBDE00D37EB4 /* HJSMainTabBarController.m */; };
+		156FF7081BD51D3900D37EB4 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7071BD51D3900D37EB4 /* SearchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		156FF7021BD4EF6500D37EB4 /* HJS_SecondHandCarPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJS_SecondHandCarPrefixHeader.pch; sourceTree = "<group>"; };
 		156FF7031BD4FBDE00D37EB4 /* HJSMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSMainTabBarController.h; sourceTree = "<group>"; };
 		156FF7041BD4FBDE00D37EB4 /* HJSMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSMainTabBarController.m; sourceTree = "<group>"; };
+		156FF7061BD51D3900D37EB4 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		156FF7071BD51D3900D37EB4 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 		156FF6D21BD4E52A00D37EB4 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				156FF7061BD51D3900D37EB4 /* SearchView.h */,
+				156FF7071BD51D3900D37EB4 /* SearchView.m */,
 				156FF6FF1BD4EE9400D37EB4 /* BasicViewController.h */,
 				156FF7001BD4EE9400D37EB4 /* BasicViewController.m */,
 			);
@@ -433,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156FF7081BD51D3900D37EB4 /* SearchView.m in Sources */,
 				156FF7051BD4FBDE00D37EB4 /* HJSMainTabBarController.m in Sources */,
 				156FF6F41BD4E52A00D37EB4 /* HJSBuyCarViewController.m in Sources */,
 				156FF6F91BD4E52A00D37EB4 /* HJSToolViewController.m in Sources */,
@@ -565,7 +571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HJS_SecondHandCar/HJS_SecondHandCarPrefixHeader.pch;
 				INFOPLIST_FILE = HJS_SecondHandCar/Info.plist;
@@ -578,7 +584,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HJS_SecondHandCar/HJS_SecondHandCarPrefixHeader.pch;
 				INFOPLIST_FILE = HJS_SecondHandCar/Info.plist;

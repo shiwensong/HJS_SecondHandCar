@@ -7,12 +7,11 @@
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "map_unpre@2x.png"
+      "filename" : "map@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "map_unpre@3x.png"
+      "scale" : "3x"
     }
   ],
   "info" : {
