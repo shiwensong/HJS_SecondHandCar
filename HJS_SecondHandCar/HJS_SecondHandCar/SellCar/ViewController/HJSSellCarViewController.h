@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HJSSellCarViewController : UIViewController
+@interface HJSSellCarViewController : BasicViewController
 
 @end

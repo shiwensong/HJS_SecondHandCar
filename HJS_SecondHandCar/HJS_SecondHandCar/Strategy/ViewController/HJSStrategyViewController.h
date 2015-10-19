@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HJSStrategyViewController : UIViewController
+@interface HJSStrategyViewController : BasicViewController
 
 @end

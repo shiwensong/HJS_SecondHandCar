@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="Nxp-eS-lex">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Seb-ar-M34" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Seb-ar-M34" customClass="HJSMainTabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nCk-xF-C3Q">
@@ -24,13 +24,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvZ-2y-amT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7.1111111111111116" y="199.84764444444443"/>
+            <point key="canvasLocation" x="262" y="199"/>
         </scene>
         <!--卖车-->
         <scene sceneID="KJG-Pw-70f">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ofO-Vf-MTi" customClass="HJSMainNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="卖车" id="MZk-yU-pcA"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ofO-Vf-MTi" customClass="HJSNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="卖车" image="label_sale" id="MZk-yU-pcA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rDi-uK-e6z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -48,8 +48,8 @@
         <!--工具-->
         <scene sceneID="wZG-SY-nzE">
             <objects>
-                <navigationController id="0Wl-wr-Y8T" customClass="HJSMainNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="工具" id="uZG-ez-U9z"/>
+                <navigationController id="0Wl-wr-Y8T" customClass="HJSNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="工具" image="label_tool" id="uZG-ez-U9z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BHC-EK-Dso">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -65,8 +65,8 @@
         <!--买车-->
         <scene sceneID="kfJ-sv-wjb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="btM-0x-Jxt" customClass="HJSMainNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="买车" id="IIg-fc-nc8"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="btM-0x-Jxt" customClass="HJSNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="买车" image="label_buy" id="IIg-fc-nc8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Yd-Ys-zwM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -81,20 +81,46 @@
             </objects>
             <point key="canvasLocation" x="-447" y="977"/>
         </scene>
-        <!--Buy Car View Controller-->
+        <!--hhh-->
         <scene sceneID="p6G-5X-qY2">
             <objects>
-                <viewController id="DVq-fA-pMj" customClass="HJSBuyCarViewController" sceneMemberID="viewController">
+                <viewController title="hhh" id="DVq-fA-pMj" customClass="HJSBuyCarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n5M-D5-DhW"/>
                         <viewControllerLayoutGuide type="bottom" id="FIl-jv-m0q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="99Q-ce-pFf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NzR-Ye-s7P"/>
+                    <navigationItem key="navigationItem" id="NzR-Ye-s7P">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="done" id="FLz-GF-DOV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BZA-cM-TkN">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="gjp-Sv-GjY">
+                            <rect key="frame" x="96" y="6" width="128" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.97891026739999998" green="0.51481175840000004" blue="0.025345828399999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="h1x-hi-iaK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xJb-an-1Zb">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wfk-nW-27k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,8 +129,8 @@
         <!--攻略-->
         <scene sceneID="fcb-sB-wm3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mzp-yV-1JB" customClass="HJSMainNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="攻略" id="cQ2-gy-ZkY"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mzp-yV-1JB" customClass="HJSNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="攻略" image="label_Raiders" id="cQ2-gy-ZkY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="e1U-BF-7Vh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -119,7 +145,7 @@
             </objects>
             <point key="canvasLocation" x="612" y="977"/>
         </scene>
-        <!--Sell Car View Controller-->
+        <!--卖车-->
         <scene sceneID="9OJ-Xl-JwT">
             <objects>
                 <viewController id="21q-M6-bHQ" customClass="HJSSellCarViewController" sceneMemberID="viewController">
@@ -128,17 +154,18 @@
                         <viewControllerLayoutGuide type="bottom" id="JAr-to-pM0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OtV-4k-ElB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.2282488537" green="1" blue="0.88603057780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pfR-aC-GgF"/>
+                    <navigationItem key="navigationItem" title="卖车" id="pfR-aC-GgF"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDj-vv-HRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-74" y="1676"/>
         </scene>
-        <!--Tool View Controller-->
+        <!--工具-->
         <scene sceneID="3cR-50-Y1U">
             <objects>
                 <viewController id="lMP-wF-zFd" customClass="HJSToolViewController" sceneMemberID="viewController">
@@ -147,17 +174,18 @@
                         <viewControllerLayoutGuide type="bottom" id="Zb9-8y-k83"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PH7-dN-zZt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.98823529409999999" green="0.92549019610000005" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JIQ-zp-jW9"/>
+                    <navigationItem key="navigationItem" title="工具" id="JIQ-zp-jW9"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ig2-am-eyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="277" y="1676"/>
         </scene>
-        <!--Strategy View Controller-->
+        <!--攻略-->
         <scene sceneID="4XD-Kf-jrX">
             <objects>
                 <viewController id="a2O-iK-Xgs" customClass="HJSStrategyViewController" sceneMemberID="viewController">
@@ -166,17 +194,18 @@
                         <viewControllerLayoutGuide type="bottom" id="rC2-vb-ReY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ixz-ed-cSz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="G9P-Ic-VjF"/>
+                    <navigationItem key="navigationItem" title="攻略" id="G9P-Ic-VjF"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAS-Kq-XQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="623" y="1676"/>
         </scene>
-        <!--Mine View Controller-->
+        <!--我的-->
         <scene sceneID="B6z-yY-dEX">
             <objects>
                 <viewController id="lMO-Tk-HQ9" customClass="HJSMineViewController" sceneMemberID="viewController">
@@ -185,11 +214,12 @@
                         <viewControllerLayoutGuide type="bottom" id="Ign-h4-Vc8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2mB-Mx-OFS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LAU-7S-SPR"/>
+                    <navigationItem key="navigationItem" title="我的" id="LAU-7S-SPR"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48M-op-nIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,8 +228,8 @@
         <!--我的-->
         <scene sceneID="zdG-Lm-g7g">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7LH-fa-06o" customClass="HJSMainNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" id="zUP-ze-au4"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7LH-fa-06o" customClass="HJSNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="label_my" id="zUP-ze-au4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6zV-xr-Gta">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -215,6 +245,13 @@
             <point key="canvasLocation" x="971" y="969"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="label_Raiders" width="24" height="24"/>
+        <image name="label_buy" width="24" height="24"/>
+        <image name="label_my" width="24" height="24"/>
+        <image name="label_sale" width="24" height="24"/>
+        <image name="label_tool" width="24" height="24"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

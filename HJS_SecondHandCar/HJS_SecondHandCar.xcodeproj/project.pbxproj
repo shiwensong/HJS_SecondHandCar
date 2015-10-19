@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		156FF6AF1BD4E4B300D37EB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6AE1BD4E4B300D37EB4 /* main.m */; };
 		156FF6B81BD4E4B300D37EB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156FF6B61BD4E4B300D37EB4 /* Main.storyboard */; };
-		156FF6BA1BD4E4B300D37EB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156FF6B91BD4E4B300D37EB4 /* Images.xcassets */; };
 		156FF6BD1BD4E4B300D37EB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156FF6BB1BD4E4B300D37EB4 /* LaunchScreen.xib */; };
 		156FF6C91BD4E4B300D37EB4 /* HJS_SecondHandCarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6C81BD4E4B300D37EB4 /* HJS_SecondHandCarTests.m */; };
 		156FF6F41BD4E52A00D37EB4 /* HJSBuyCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6D81BD4E52A00D37EB4 /* HJSBuyCarViewController.m */; };
@@ -18,6 +17,10 @@
 		156FF6F71BD4E52A00D37EB4 /* HJSSellCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6E71BD4E52A00D37EB4 /* HJSSellCarViewController.m */; };
 		156FF6F81BD4E52A00D37EB4 /* HJSStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6ED1BD4E52A00D37EB4 /* HJSStrategyViewController.m */; };
 		156FF6F91BD4E52A00D37EB4 /* HJSToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6F31BD4E52A00D37EB4 /* HJSToolViewController.m */; };
+		156FF6FC1BD4E90B00D37EB4 /* HJSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6FB1BD4E90B00D37EB4 /* HJSNavigationViewController.m */; };
+		156FF6FE1BD4EC9000D37EB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156FF6FD1BD4EC9000D37EB4 /* Images.xcassets */; };
+		156FF7011BD4EE9400D37EB4 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7001BD4EE9400D37EB4 /* BasicViewController.m */; };
+		156FF7051BD4FBDE00D37EB4 /* HJSMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7041BD4FBDE00D37EB4 /* HJSMainTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,6 @@
 		156FF6AD1BD4E4B300D37EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		156FF6AE1BD4E4B300D37EB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		156FF6B71BD4E4B300D37EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		156FF6B91BD4E4B300D37EB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		156FF6BC1BD4E4B300D37EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		156FF6C21BD4E4B300D37EB4 /* HJS_SecondHandCarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HJS_SecondHandCarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		156FF6C71BD4E4B300D37EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 		156FF6ED1BD4E52A00D37EB4 /* HJSStrategyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSStrategyViewController.m; sourceTree = "<group>"; };
 		156FF6F21BD4E52A00D37EB4 /* HJSToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSToolViewController.h; sourceTree = "<group>"; };
 		156FF6F31BD4E52A00D37EB4 /* HJSToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSToolViewController.m; sourceTree = "<group>"; };
+		156FF6FA1BD4E90B00D37EB4 /* HJSNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSNavigationViewController.h; sourceTree = "<group>"; };
+		156FF6FB1BD4E90B00D37EB4 /* HJSNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSNavigationViewController.m; sourceTree = "<group>"; };
+		156FF6FD1BD4EC9000D37EB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		156FF6FF1BD4EE9400D37EB4 /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
+		156FF7001BD4EE9400D37EB4 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		156FF7021BD4EF6500D37EB4 /* HJS_SecondHandCarPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJS_SecondHandCarPrefixHeader.pch; sourceTree = "<group>"; };
+		156FF7031BD4FBDE00D37EB4 /* HJSMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSMainTabBarController.h; sourceTree = "<group>"; };
+		156FF7041BD4FBDE00D37EB4 /* HJSMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSMainTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,15 +103,15 @@
 		156FF6AB1BD4E4B300D37EB4 /* HJS_SecondHandCar */ = {
 			isa = PBXGroup;
 			children = (
+				156FF6D91BD4E52A00D37EB4 /* Main */,
 				156FF6D21BD4E52A00D37EB4 /* Basic */,
 				156FF6D31BD4E52A00D37EB4 /* BuyCar */,
-				156FF6D91BD4E52A00D37EB4 /* Main */,
-				156FF6DC1BD4E52A00D37EB4 /* Mine */,
 				156FF6E21BD4E52A00D37EB4 /* SellCar */,
-				156FF6E81BD4E52A00D37EB4 /* Strategy */,
 				156FF6EE1BD4E52A00D37EB4 /* Tool */,
-				156FF6B91BD4E4B300D37EB4 /* Images.xcassets */,
+				156FF6E81BD4E52A00D37EB4 /* Strategy */,
+				156FF6DC1BD4E52A00D37EB4 /* Mine */,
 				156FF6BB1BD4E4B300D37EB4 /* LaunchScreen.xib */,
+				156FF6FD1BD4EC9000D37EB4 /* Images.xcassets */,
 				156FF6AC1BD4E4B300D37EB4 /* Supporting Files */,
 			);
 			path = HJS_SecondHandCar;
@@ -112,6 +122,7 @@
 			children = (
 				156FF6AD1BD4E4B300D37EB4 /* Info.plist */,
 				156FF6AE1BD4E4B300D37EB4 /* main.m */,
+				156FF7021BD4EF6500D37EB4 /* HJS_SecondHandCarPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -136,6 +147,8 @@
 		156FF6D21BD4E52A00D37EB4 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				156FF6FF1BD4EE9400D37EB4 /* BasicViewController.h */,
+				156FF7001BD4EE9400D37EB4 /* BasicViewController.m */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -179,6 +192,10 @@
 				156FF6B61BD4E4B300D37EB4 /* Main.storyboard */,
 				156FF6DA1BD4E52A00D37EB4 /* AppDelegate.h */,
 				156FF6DB1BD4E52A00D37EB4 /* AppDelegate.m */,
+				156FF7031BD4FBDE00D37EB4 /* HJSMainTabBarController.h */,
+				156FF7041BD4FBDE00D37EB4 /* HJSMainTabBarController.m */,
+				156FF6FA1BD4E90B00D37EB4 /* HJSNavigationViewController.h */,
+				156FF6FB1BD4E90B00D37EB4 /* HJSNavigationViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -359,6 +376,7 @@
 		156FF6A11BD4E4B300D37EB4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HJS;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = tens;
 				TargetAttributes = {
@@ -395,9 +413,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156FF6FE1BD4EC9000D37EB4 /* Images.xcassets in Resources */,
 				156FF6B81BD4E4B300D37EB4 /* Main.storyboard in Resources */,
 				156FF6BD1BD4E4B300D37EB4 /* LaunchScreen.xib in Resources */,
-				156FF6BA1BD4E4B300D37EB4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +433,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156FF7051BD4FBDE00D37EB4 /* HJSMainTabBarController.m in Sources */,
 				156FF6F41BD4E52A00D37EB4 /* HJSBuyCarViewController.m in Sources */,
 				156FF6F91BD4E52A00D37EB4 /* HJSToolViewController.m in Sources */,
 				156FF6F71BD4E52A00D37EB4 /* HJSSellCarViewController.m in Sources */,
 				156FF6AF1BD4E4B300D37EB4 /* main.m in Sources */,
+				156FF6FC1BD4E90B00D37EB4 /* HJSNavigationViewController.m in Sources */,
+				156FF7011BD4EE9400D37EB4 /* BasicViewController.m in Sources */,
 				156FF6F81BD4E52A00D37EB4 /* HJSStrategyViewController.m in Sources */,
 				156FF6F51BD4E52A00D37EB4 /* AppDelegate.m in Sources */,
 				156FF6F61BD4E52A00D37EB4 /* HJSMineViewController.m in Sources */,
@@ -498,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -533,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -544,6 +565,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HJS_SecondHandCar/HJS_SecondHandCarPrefixHeader.pch;
 				INFOPLIST_FILE = HJS_SecondHandCar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -554,6 +578,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HJS_SecondHandCar/HJS_SecondHandCarPrefixHeader.pch;
 				INFOPLIST_FILE = HJS_SecondHandCar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
