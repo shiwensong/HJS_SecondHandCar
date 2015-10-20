@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Seb-ar-M34">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
@@ -100,23 +101,28 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BZA-cM-TkN">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="成都">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </barButtonItem>
-                        <view key="titleView" contentMode="scaleToFill" id="gjp-Sv-GjY">
-                            <rect key="frame" x="96" y="6" width="128" height="33"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="jHR-LH-46d">
+                            <rect key="frame" x="93" y="7" width="130" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.97891026739999998" green="0.51481175840000004" blue="0.025345828399999999" alpha="1" colorSpace="calibratedRGB"/>
-                        </view>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                         <barButtonItem key="rightBarButtonItem" style="done" id="h1x-hi-iaK">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xJb-an-1Zb">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xJb-an-1Zb">
+                                <rect key="frame" x="233" y="7" width="75" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" image="map">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" image="map_unpre"/>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -124,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wfk-nW-27k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-440" y="1676"/>
+            <point key="canvasLocation" x="-447" y="1670"/>
         </scene>
         <!--攻略-->
         <scene sceneID="fcb-sB-wm3">
@@ -251,6 +257,8 @@
         <image name="label_my" width="24" height="24"/>
         <image name="label_sale" width="24" height="24"/>
         <image name="label_tool" width="24" height="24"/>
+        <image name="map" width="20" height="22"/>
+        <image name="map_unpre" width="20" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
