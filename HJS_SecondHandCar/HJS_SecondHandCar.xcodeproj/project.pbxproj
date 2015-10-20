@@ -565,7 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HJS_SecondHandCar/HJS_SecondHandCarPrefixHeader.pch;
 				INFOPLIST_FILE = HJS_SecondHandCar/Info.plist;
@@ -578,7 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HJS_SecondHandCar/HJS_SecondHandCarPrefixHeader.pch;
 				INFOPLIST_FILE = HJS_SecondHandCar/Info.plist;
@@ -640,6 +640,7 @@
 				156FF6CE1BD4E4B300D37EB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		156FF6CF1BD4E4B300D37EB4 /* Build configuration list for PBXNativeTarget "HJS_SecondHandCarTests" */ = {
 			isa = XCConfigurationList;
@@ -648,6 +649,7 @@
 				156FF6D11BD4E4B300D37EB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
