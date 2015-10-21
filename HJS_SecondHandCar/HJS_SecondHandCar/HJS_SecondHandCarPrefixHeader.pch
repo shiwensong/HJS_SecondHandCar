@@ -30,4 +30,7 @@
 
 #import "MBProgressHUD.h"
 
+//这里我们省份的名称
+#define ProvinceLocationJson @"ProvinceLocation"
+
 #endif

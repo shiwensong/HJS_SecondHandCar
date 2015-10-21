@@ -12,11 +12,9 @@
 #import "CarInfoCell.h"
 #import "SWSWebDetailViewController.h"
 
-@interface HJSBuyCarViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface HJSBuyCarViewController () <UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *buyCarTableView;
-
-@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 
 @property (weak, nonatomic) IBOutlet UIView *sortBgView;
 
@@ -24,6 +22,10 @@
 @property (strong, nonatomic) NSMutableArray *modelsArray;
 
 @property (strong, nonatomic) SWSResultMode *resultModel;
+
+@property (strong, nonatomic)  UITextField *searchTextField;
+
+@property (strong, nonatomic) UIView *textFieldBgView;
 
 @end
 
@@ -37,13 +39,26 @@
     [self setSearchBgViewSearchCar];
     [self loadCarDatas];
     [self setSortbgViewSetting];
+    self.searchTextField.backgroundColor = [UIColor whiteColor];
+    self.searchTextField.delegate = self;
     
-    
+    self.navigationItem.titleView = self.textFieldBgView;
 }
+
+//- (void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//    
+//    self.tabBarController.tabBar.hidden = NO;
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated{
+//    [super viewWillDisappear:animated];
+//    
+//    self.tabBarController.tabBar.hidden = YES;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Private
@@ -76,8 +91,72 @@
 
 - (void)setSortbgViewSetting{
     self.sortBgView.alpha = 0.8;
+}
+
+- (void)setSearchtextFieldAnimatetion{
+    
+    
+    //设置我们的navigationBar的按钮
+    self.navigationItem.leftBarButtonItem = nil;
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"取消" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = item;
+    
+    
+    self.navigationItem.rightBarButtonItem = nil;
+    
+    [UIView animateWithDuration:2 animations:^{
+        
+//        CGRect frame = self.searchTextField.frame;
+//        frame.size.width = 250;
+//        self.searchTextField.frame = frame;
+        
+        self.searchTextField.frame = CGRectMake(0, 0, TScreenWidth - 50, 35);
+    }];
+    
 
 }
+
+- (void)buttonAction:(UIButton *)button{
+    
+    [UIView animateWithDuration:2 delay:0 usingSpringWithDamping:0 initialSpringVelocity:0 options:0 animations:^{
+        CGRect lastFrame = self.searchTextField.frame;
+        lastFrame.size.width = 100;
+        self.searchTextField.frame = lastFrame;
+    } completion:^(BOOL finished) {
+        NSLog(@"动画完成了！");
+    }];
+    
+}
+
+#pragma mark - IBAction
+
+//这是控制器左上角的定位按钮
+- (IBAction)locationPlaceAction:(UIButton *)sender {
+    
+    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChildViewController"];
+    CGRect frame = self.view.bounds;
+    frame.origin.x = CGRectGetWidth(frame);
+    viewController.view.frame = frame;
+    viewController.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+    
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    [keyWindow addSubview:viewController.view];
+    
+    [UIView animateWithDuration:2 animations:^{
+
+        CGRect lastFrame = viewController.view.frame;
+        lastFrame.origin.x = 0;
+        viewController.view.frame = lastFrame;
+    }];
+    
+    [keyWindow.rootViewController addChildViewController:viewController];
+}
+
 
 #pragma mark - Protol Group
 
@@ -114,10 +193,16 @@
     SWSWebDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SWSWebDetailViewController"];
     viewController.URLString = urlString;
     [self.navigationController pushViewController:viewController animated:YES];
-    
-    
     [self.buyCarTableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     
+    [self setSearchtextFieldAnimatetion];
+    
+    return NO;
 }
 
 #pragma mark - Custom Accessor
@@ -128,4 +213,24 @@
     }
     return _modelsArray;
 }
+
+
+
+
+- (UIView *)textFieldBgView{
+    if (_textFieldBgView == nil) {
+        _textFieldBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, TScreenWidth - 50, 35)];
+//        _textFieldBgView.backgroundColor = [UIColor whiteColor];
+        _searchTextField = [[UITextField alloc] initWithFrame:CGRectMake(50, 0, 100, 35)];
+        _searchTextField.backgroundColor = [UIColor lightGrayColor];
+        _searchTextField.placeholder = @"请输入文字...";
+        _searchTextField.delegate = self;
+        [_textFieldBgView addSubview:_searchTextField];
+    }
+    
+    return _textFieldBgView;
+}
+
+
+
 @end

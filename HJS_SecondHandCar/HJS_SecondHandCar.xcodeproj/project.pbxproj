@@ -26,7 +26,10 @@
 		152751D91BD6323400DE44F1 /* SWSWebDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 152751D81BD6323400DE44F1 /* SWSWebDetailViewController.m */; };
 		152751DC1BD635EE00DE44F1 /* TSHUDPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 152751DB1BD635EE00DE44F1 /* TSHUDPrompt.m */; };
 		152751E01BD6360000DE44F1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 152751DF1BD6360000DE44F1 /* MBProgressHUD.m */; };
-		152751E21BD63FDE00DE44F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 152751E11BD63FDE00DE44F1 /* Images.xcassets */; };
+		1530D5831BD71FBD0065634B /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1530D5821BD71FBD0065634B /* ChildViewController.m */; };
+		1530D5861BD720CE0065634B /* SWSChildCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1530D5851BD720CE0065634B /* SWSChildCell.m */; };
+		1530D5891BD737AB0065634B /* ProvinceLocation.json in Resources */ = {isa = PBXBuildFile; fileRef = 1530D5881BD737AB0065634B /* ProvinceLocation.json */; };
+		1530D58C1BD7384F0065634B /* TSJsonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1530D58B1BD7384F0065634B /* TSJsonData.m */; };
 		155AA0541BD66338003EB700 /* TSHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 155AA0531BD66338003EB700 /* TSHeaderView.m */; };
 		156FF6AF1BD4E4B300D37EB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF6AE1BD4E4B300D37EB4 /* main.m */; };
 		156FF6B81BD4E4B300D37EB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156FF6B61BD4E4B300D37EB4 /* Main.storyboard */; };
@@ -57,6 +60,7 @@
 		156FF7341BD5E87B00D37EB4 /* TSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7331BD5E87B00D37EB4 /* TSBaseModel.m */; };
 		156FF7371BD5E96100D37EB4 /* SWSResultMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7361BD5E96100D37EB4 /* SWSResultMode.m */; };
 		156FF73A1BD5E97500D37EB4 /* SWSCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7391BD5E97500D37EB4 /* SWSCarModel.m */; };
+		15D3CE231BD789EA006163A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D3CE221BD789EA006163A5 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +114,13 @@
 		152751DB1BD635EE00DE44F1 /* TSHUDPrompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHUDPrompt.m; sourceTree = "<group>"; };
 		152751DE1BD6360000DE44F1 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		152751DF1BD6360000DE44F1 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		152751E11BD63FDE00DE44F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1530D5811BD71FBD0065634B /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
+		1530D5821BD71FBD0065634B /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
+		1530D5841BD720CE0065634B /* SWSChildCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSChildCell.h; sourceTree = "<group>"; };
+		1530D5851BD720CE0065634B /* SWSChildCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSChildCell.m; sourceTree = "<group>"; };
+		1530D5881BD737AB0065634B /* ProvinceLocation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProvinceLocation.json; sourceTree = "<group>"; };
+		1530D58A1BD7384F0065634B /* TSJsonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSJsonData.h; sourceTree = "<group>"; };
+		1530D58B1BD7384F0065634B /* TSJsonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSJsonData.m; sourceTree = "<group>"; };
 		155AA0521BD66338003EB700 /* TSHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHeaderView.h; sourceTree = "<group>"; };
 		155AA0531BD66338003EB700 /* TSHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHeaderView.m; sourceTree = "<group>"; };
 		156FF6A91BD4E4B300D37EB4 /* HJS_SecondHandCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJS_SecondHandCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +183,7 @@
 		156FF7361BD5E96100D37EB4 /* SWSResultMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSResultMode.m; sourceTree = "<group>"; };
 		156FF7381BD5E97500D37EB4 /* SWSCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSCarModel.h; sourceTree = "<group>"; };
 		156FF7391BD5E97500D37EB4 /* SWSCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSCarModel.m; sourceTree = "<group>"; };
+		15D3CE221BD789EA006163A5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +253,14 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		1530D5871BD737AB0065634B /* JsonOrPlist */ = {
+			isa = PBXGroup;
+			children = (
+				1530D5881BD737AB0065634B /* ProvinceLocation.json */,
+			);
+			path = JsonOrPlist;
+			sourceTree = "<group>";
+		};
 		156FF6A01BD4E4B300D37EB4 = {
 			isa = PBXGroup;
 			children = (
@@ -272,8 +291,9 @@
 				156FF6DC1BD4E52A00D37EB4 /* Mine */,
 				156FF7101BD5E36800D37EB4 /* Other */,
 				156FF72E1BD5E5CC00D37EB4 /* Public */,
+				1530D5871BD737AB0065634B /* JsonOrPlist */,
 				156FF6BB1BD4E4B300D37EB4 /* LaunchScreen.xib */,
-				152751E11BD63FDE00DE44F1 /* Images.xcassets */,
+				15D3CE221BD789EA006163A5 /* Images.xcassets */,
 				156FF6AC1BD4E4B300D37EB4 /* Supporting Files */,
 			);
 			path = HJS_SecondHandCar;
@@ -310,6 +330,8 @@
 		156FF6D21BD4E52A00D37EB4 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				1530D58A1BD7384F0065634B /* TSJsonData.h */,
+				1530D58B1BD7384F0065634B /* TSJsonData.m */,
 				155AA0521BD66338003EB700 /* TSHeaderView.h */,
 				155AA0531BD66338003EB700 /* TSHeaderView.m */,
 				156FF70C1BD5E33400D37EB4 /* TSHttpRequest.h */,
@@ -363,6 +385,10 @@
 				156FF6D81BD4E52A00D37EB4 /* HJSBuyCarViewController.m */,
 				152751D71BD6323400DE44F1 /* SWSWebDetailViewController.h */,
 				152751D81BD6323400DE44F1 /* SWSWebDetailViewController.m */,
+				1530D5811BD71FBD0065634B /* ChildViewController.h */,
+				1530D5821BD71FBD0065634B /* ChildViewController.m */,
+				1530D5841BD720CE0065634B /* SWSChildCell.h */,
+				1530D5851BD720CE0065634B /* SWSChildCell.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -639,7 +665,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				152751E21BD63FDE00DE44F1 /* Images.xcassets in Resources */,
+				1530D5891BD737AB0065634B /* ProvinceLocation.json in Resources */,
+				15D3CE231BD789EA006163A5 /* Images.xcassets in Resources */,
 				156FF6B81BD4E4B300D37EB4 /* Main.storyboard in Resources */,
 				156FF6BD1BD4E4B300D37EB4 /* LaunchScreen.xib in Resources */,
 			);
@@ -670,6 +697,7 @@
 				156FF7051BD4FBDE00D37EB4 /* HJSMainTabBarController.m in Sources */,
 				156FF7261BD5E38200D37EB4 /* AFHTTPRequestOperationManager.m in Sources */,
 				156FF7341BD5E87B00D37EB4 /* TSBaseModel.m in Sources */,
+				1530D58C1BD7384F0065634B /* TSJsonData.m in Sources */,
 				152751D51BD5FF9F00DE44F1 /* UIView+WebCacheOperation.m in Sources */,
 				156FF7311BD5E61C00D37EB4 /* UIAlertView+alertError.m in Sources */,
 				152751C91BD5FF9F00DE44F1 /* SDWebImageCompat.m in Sources */,
@@ -701,6 +729,8 @@
 				156FF72D1BD5E38200D37EB4 /* AFURLSessionManager.m in Sources */,
 				156FF7011BD4EE9400D37EB4 /* BasicViewController.m in Sources */,
 				156FF6F81BD4E52A00D37EB4 /* HJSStrategyViewController.m in Sources */,
+				1530D5861BD720CE0065634B /* SWSChildCell.m in Sources */,
+				1530D5831BD71FBD0065634B /* ChildViewController.m in Sources */,
 				156FF6F51BD4E52A00D37EB4 /* AppDelegate.m in Sources */,
 				156FF70B1BD5E1C500D37EB4 /* CarInfoCell.m in Sources */,
 				156FF72C1BD5E38200D37EB4 /* AFURLResponseSerialization.m in Sources */,

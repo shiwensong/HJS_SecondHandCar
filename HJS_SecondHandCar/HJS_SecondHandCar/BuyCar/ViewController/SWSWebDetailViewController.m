@@ -27,20 +27,30 @@
     NSURL *url =[NSURL URLWithString:self.URLString];
     NSURLRequest *request =[NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
+    
+    
+    //设置titleView的字体颜色
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Custom Accessor
+
+//这是我们自定义的返回按钮，触发的方法
+- (IBAction)backHomeButtonAction:(UIButton *)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 #pragma mark - Protol Group
 
 #pragma mark - UIWebViewDelegate
-
-//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-//    
-//   
-//}
 
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     
@@ -60,7 +70,7 @@
     self.HUD.removeFromSuperViewOnHide = YES;
     [self.view addSubview:self.HUD];
     
-    [self.HUD hide:YES afterDelay:3];
+    [self.HUD hide:YES afterDelay:1];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{

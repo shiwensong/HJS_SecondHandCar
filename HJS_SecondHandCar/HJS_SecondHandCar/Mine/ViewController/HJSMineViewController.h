@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HJSMineViewController : BasicViewController
+@interface HJSMineViewController : UITableViewController
 
 @end
