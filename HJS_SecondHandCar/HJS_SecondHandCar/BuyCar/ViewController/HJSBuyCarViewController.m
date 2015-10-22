@@ -11,21 +11,21 @@
 #import "SWSResultMode.h"
 #import "CarInfoCell.h"
 #import "SWSWebDetailViewController.h"
+#import "SWSModelViewController.h"
 
-@interface HJSBuyCarViewController () <UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate>
+@interface HJSBuyCarViewController () <UITableViewDataSource, UITableViewDelegate,UISearchBarDelegate,UISearchControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *buyCarTableView;
 
 @property (weak, nonatomic) IBOutlet UIView *sortBgView;
 
-
 @property (strong, nonatomic) NSMutableArray *modelsArray;
 
 @property (strong, nonatomic) SWSResultMode *resultModel;
 
-@property (strong, nonatomic)  UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UISearchBar *mysearchBar;
 
-@property (strong, nonatomic) UIView *textFieldBgView;
+
 
 @end
 
@@ -36,47 +36,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setSearchBgViewSearchCar];
     [self loadCarDatas];
     [self setSortbgViewSetting];
-    self.searchTextField.backgroundColor = [UIColor whiteColor];
-    self.searchTextField.delegate = self;
-    
-    self.navigationItem.titleView = self.textFieldBgView;
-}
 
-//- (void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:animated];
-//    
-//    self.tabBarController.tabBar.hidden = NO;
-//}
-//
-//- (void)viewWillDisappear:(BOOL)animated{
-//    [super viewWillDisappear:animated];
-//    
-//    self.tabBarController.tabBar.hidden = YES;
-//}
+    self.navigationItem.titleView = self.mysearchBar;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+- (void)dealloc{
+    
+    [self.view removeFromSuperview];
+    [self removeFromParentViewController];
+}
+
 #pragma mark - Private
 
-//设置我们的navigationBar的搜索框
-- (void)setSearchBgViewSearchCar
-{
-//    self.searchTextField.layer.borderColor = [UIColor grayColor].CGColor;
-//    self.searchTextField.backgroundColor = [UIColor lightGrayColor];
-//    self.searchTextField.layer.borderWidth =1.0;
-//    self.searchTextField.textColor = [UIColor whiteColor];
-//    self.searchTextField.layer.cornerRadius =15.0;
-//    self.searchTextField.inputAccessoryView = (UIView *)[UIImage imageNamed:@"search_icon"];
-}
 
 - (void)loadCarDatas{
     
-    NSString *urlString = @"http://apps.api.che168.com/Phone/V52/cars/search.ashx?_sign=b31212b55d1c6ca4560683e21291fb7b&channelid=App%20Store&pagesize=24&orderby=0&needaroundtype=0&pageindex=1&cid=510100&ispic=1&appversion=4.8.7&_appid=2scapp.ios&areaid=400000&dealertype=9&lastdate=&pid=510000";
+    NSString *urlString = SWSHomeRequestURL;
     
     [TSHttpRequest requestURL:urlString parameters:nil requestType:RequesetIsGET success:^(id result) {
         if (!_resultModel) {
@@ -91,46 +72,6 @@
 
 - (void)setSortbgViewSetting{
     self.sortBgView.alpha = 0.8;
-}
-
-- (void)setSearchtextFieldAnimatetion{
-    
-    
-    //设置我们的navigationBar的按钮
-    self.navigationItem.leftBarButtonItem = nil;
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"取消" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
-    self.navigationItem.rightBarButtonItem = item;
-    
-    
-    self.navigationItem.rightBarButtonItem = nil;
-    
-    [UIView animateWithDuration:2 animations:^{
-        
-//        CGRect frame = self.searchTextField.frame;
-//        frame.size.width = 250;
-//        self.searchTextField.frame = frame;
-        
-        self.searchTextField.frame = CGRectMake(0, 0, TScreenWidth - 50, 35);
-    }];
-    
-
-}
-
-- (void)buttonAction:(UIButton *)button{
-    
-    [UIView animateWithDuration:2 delay:0 usingSpringWithDamping:0 initialSpringVelocity:0 options:0 animations:^{
-        CGRect lastFrame = self.searchTextField.frame;
-        lastFrame.size.width = 100;
-        self.searchTextField.frame = lastFrame;
-    } completion:^(BOOL finished) {
-        NSLog(@"动画完成了！");
-    }];
-    
 }
 
 #pragma mark - IBAction
@@ -169,14 +110,27 @@
 #pragma mark - UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.resultModel.carModels.count;
+    
+    if(tableView == self.buyCarTableView){
+        
+        return self.resultModel.carModels.count;
+    }else{
+        return 5;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CarInfoCell *cell = nil;
+    if (tableView == self.buyCarTableView) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"CarInfoCell" forIndexPath:indexPath];
+        
+        
+        cell.model = self.resultModel.carModels[indexPath.row];
+    }else{
+        cell = (CarInfoCell *)[[UITableViewCell alloc] init];
+        cell.textLabel.text = [@(indexPath.row) stringValue];
+    }
     
-    CarInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CarInfoCell" forIndexPath:indexPath];
-    
-    cell.model = self.resultModel.carModels[indexPath.row];
     return cell;
 }
 
@@ -196,14 +150,27 @@
     [self.buyCarTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - UITextFieldDelegate
 
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+#pragma makr - UISearchBarDelegate
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
     
-    [self setSearchtextFieldAnimatetion];
+    SWSModelViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SWSModelViewController"];
+    viewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:viewController animated:YES completion:nil];
     
     return NO;
-}
+}                      // return NO to not become first responder
+//- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar;                     // called when text starts editing
+//- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar;                        // return NO to not resign first responder
+//- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar;                       // called when text ends editing
+//- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;   // called when text changes (including clear)
+//- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text NS_AVAILABLE_IOS(3_0); // called before text changes
+//
+//- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;                     // called when keyboard search button pressed
+//- (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar;                   // called when bookmark button pressed
+//- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar;                     // called when cancel button pressed
+//- (void)searchBarResultsListButtonClicked:(UISearchBar *)searchBar NS_AVAILABLE_IOS(3_2);
 
 #pragma mark - Custom Accessor
 
@@ -212,23 +179,6 @@
         _modelsArray = [NSMutableArray array];
     }
     return _modelsArray;
-}
-
-
-
-
-- (UIView *)textFieldBgView{
-    if (_textFieldBgView == nil) {
-        _textFieldBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, TScreenWidth - 50, 35)];
-//        _textFieldBgView.backgroundColor = [UIColor whiteColor];
-        _searchTextField = [[UITextField alloc] initWithFrame:CGRectMake(50, 0, 100, 35)];
-        _searchTextField.backgroundColor = [UIColor lightGrayColor];
-        _searchTextField.placeholder = @"请输入文字...";
-        _searchTextField.delegate = self;
-        [_textFieldBgView addSubview:_searchTextField];
-    }
-    
-    return _textFieldBgView;
 }
 
 

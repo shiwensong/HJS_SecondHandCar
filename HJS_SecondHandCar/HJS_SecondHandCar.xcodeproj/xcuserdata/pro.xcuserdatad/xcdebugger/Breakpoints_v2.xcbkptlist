@@ -14,19 +14,12 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.AddressBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HJS_SecondHandCar/BuyCar/ViewController/SWSWebDetailViewController.m"
-            timestampString = "467124256.924437"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "-webView:didFailLoadWithError:"
-            landmarkType = "5">
+            symbolName = "*0x10d85ca1b">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

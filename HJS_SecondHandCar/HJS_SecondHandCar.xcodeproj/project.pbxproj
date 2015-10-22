@@ -61,6 +61,12 @@
 		156FF7371BD5E96100D37EB4 /* SWSResultMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7361BD5E96100D37EB4 /* SWSResultMode.m */; };
 		156FF73A1BD5E97500D37EB4 /* SWSCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7391BD5E97500D37EB4 /* SWSCarModel.m */; };
 		15D3CE231BD789EA006163A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D3CE221BD789EA006163A5 /* Images.xcassets */; };
+		15D3CE6F1BD87ADD006163A5 /* SWSStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3CE6E1BD87ADD006163A5 /* SWSStrategyViewController.m */; };
+		15D3CE721BD87C58006163A5 /* SWSCarNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3CE711BD87C58006163A5 /* SWSCarNewsCell.m */; };
+		15D3CED91BD8B821006163A5 /* SWSModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3CED81BD8B821006163A5 /* SWSModelViewController.m */; };
+		15D3CEDC1BD8C399006163A5 /* UIColor+randomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3CEDB1BD8C399006163A5 /* UIColor+randomColor.m */; };
+		15D3CF141BD8F4DE006163A5 /* SWSResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3CF131BD8F4DE006163A5 /* SWSResultModel.m */; };
+		15D3CF171BD8F4FC006163A5 /* DetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3CF161BD8F4FC006163A5 /* DetailModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,8 +122,8 @@
 		152751DF1BD6360000DE44F1 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		1530D5811BD71FBD0065634B /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
 		1530D5821BD71FBD0065634B /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
-		1530D5841BD720CE0065634B /* SWSChildCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSChildCell.h; sourceTree = "<group>"; };
-		1530D5851BD720CE0065634B /* SWSChildCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSChildCell.m; sourceTree = "<group>"; };
+		1530D5841BD720CE0065634B /* SWSChildCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWSChildCell.h; path = HJS_SecondHandCar/BuyCar/ViewController/SWSChildCell.h; sourceTree = SOURCE_ROOT; };
+		1530D5851BD720CE0065634B /* SWSChildCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWSChildCell.m; path = HJS_SecondHandCar/BuyCar/ViewController/SWSChildCell.m; sourceTree = SOURCE_ROOT; };
 		1530D5881BD737AB0065634B /* ProvinceLocation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProvinceLocation.json; sourceTree = "<group>"; };
 		1530D58A1BD7384F0065634B /* TSJsonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSJsonData.h; sourceTree = "<group>"; };
 		1530D58B1BD7384F0065634B /* TSJsonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSJsonData.m; sourceTree = "<group>"; };
@@ -184,6 +190,18 @@
 		156FF7381BD5E97500D37EB4 /* SWSCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSCarModel.h; sourceTree = "<group>"; };
 		156FF7391BD5E97500D37EB4 /* SWSCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSCarModel.m; sourceTree = "<group>"; };
 		15D3CE221BD789EA006163A5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		15D3CE6D1BD87ADD006163A5 /* SWSStrategyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSStrategyViewController.h; sourceTree = "<group>"; };
+		15D3CE6E1BD87ADD006163A5 /* SWSStrategyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSStrategyViewController.m; sourceTree = "<group>"; };
+		15D3CE701BD87C58006163A5 /* SWSCarNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSCarNewsCell.h; sourceTree = "<group>"; };
+		15D3CE711BD87C58006163A5 /* SWSCarNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSCarNewsCell.m; sourceTree = "<group>"; };
+		15D3CED71BD8B821006163A5 /* SWSModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSModelViewController.h; sourceTree = "<group>"; };
+		15D3CED81BD8B821006163A5 /* SWSModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSModelViewController.m; sourceTree = "<group>"; };
+		15D3CEDA1BD8C399006163A5 /* UIColor+randomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+randomColor.h"; sourceTree = "<group>"; };
+		15D3CEDB1BD8C399006163A5 /* UIColor+randomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+randomColor.m"; sourceTree = "<group>"; };
+		15D3CF121BD8F4DE006163A5 /* SWSResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSResultModel.h; sourceTree = "<group>"; };
+		15D3CF131BD8F4DE006163A5 /* SWSResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSResultModel.m; sourceTree = "<group>"; };
+		15D3CF151BD8F4FC006163A5 /* DetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailModel.h; sourceTree = "<group>"; };
+		15D3CF161BD8F4FC006163A5 /* DetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +362,8 @@
 				156FF7331BD5E87B00D37EB4 /* TSBaseModel.m */,
 				152751DA1BD635EE00DE44F1 /* TSHUDPrompt.h */,
 				152751DB1BD635EE00DE44F1 /* TSHUDPrompt.m */,
+				15D3CEDA1BD8C399006163A5 /* UIColor+randomColor.h */,
+				15D3CEDB1BD8C399006163A5 /* UIColor+randomColor.m */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -372,6 +392,8 @@
 		156FF6D51BD4E52A00D37EB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1530D5841BD720CE0065634B /* SWSChildCell.h */,
+				1530D5851BD720CE0065634B /* SWSChildCell.m */,
 				156FF7091BD5E1C500D37EB4 /* CarInfoCell.h */,
 				156FF70A1BD5E1C500D37EB4 /* CarInfoCell.m */,
 			);
@@ -387,8 +409,8 @@
 				152751D81BD6323400DE44F1 /* SWSWebDetailViewController.m */,
 				1530D5811BD71FBD0065634B /* ChildViewController.h */,
 				1530D5821BD71FBD0065634B /* ChildViewController.m */,
-				1530D5841BD720CE0065634B /* SWSChildCell.h */,
-				1530D5851BD720CE0065634B /* SWSChildCell.m */,
+				15D3CED71BD8B821006163A5 /* SWSModelViewController.h */,
+				15D3CED81BD8B821006163A5 /* SWSModelViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -476,9 +498,9 @@
 		156FF6E81BD4E52A00D37EB4 /* Strategy */ = {
 			isa = PBXGroup;
 			children = (
+				156FF6EB1BD4E52A00D37EB4 /* ViewController */,
 				156FF6E91BD4E52A00D37EB4 /* Model */,
 				156FF6EA1BD4E52A00D37EB4 /* View */,
-				156FF6EB1BD4E52A00D37EB4 /* ViewController */,
 			);
 			path = Strategy;
 			sourceTree = "<group>";
@@ -486,6 +508,10 @@
 		156FF6E91BD4E52A00D37EB4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				15D3CF121BD8F4DE006163A5 /* SWSResultModel.h */,
+				15D3CF131BD8F4DE006163A5 /* SWSResultModel.m */,
+				15D3CF151BD8F4FC006163A5 /* DetailModel.h */,
+				15D3CF161BD8F4FC006163A5 /* DetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -493,6 +519,8 @@
 		156FF6EA1BD4E52A00D37EB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				15D3CE701BD87C58006163A5 /* SWSCarNewsCell.h */,
+				15D3CE711BD87C58006163A5 /* SWSCarNewsCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -502,6 +530,8 @@
 			children = (
 				156FF6EC1BD4E52A00D37EB4 /* HJSStrategyViewController.h */,
 				156FF6ED1BD4E52A00D37EB4 /* HJSStrategyViewController.m */,
+				15D3CE6D1BD87ADD006163A5 /* SWSStrategyViewController.h */,
+				15D3CE6E1BD87ADD006163A5 /* SWSStrategyViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -694,9 +724,13 @@
 				152751C81BD5FF9F00DE44F1 /* SDImageCache.m in Sources */,
 				152751CD1BD5FF9F00DE44F1 /* SDWebImageManager.m in Sources */,
 				156FF7081BD51D3900D37EB4 /* SearchView.m in Sources */,
+				15D3CED91BD8B821006163A5 /* SWSModelViewController.m in Sources */,
 				156FF7051BD4FBDE00D37EB4 /* HJSMainTabBarController.m in Sources */,
 				156FF7261BD5E38200D37EB4 /* AFHTTPRequestOperationManager.m in Sources */,
 				156FF7341BD5E87B00D37EB4 /* TSBaseModel.m in Sources */,
+				15D3CE6F1BD87ADD006163A5 /* SWSStrategyViewController.m in Sources */,
+				15D3CF171BD8F4FC006163A5 /* DetailModel.m in Sources */,
+				15D3CEDC1BD8C399006163A5 /* UIColor+randomColor.m in Sources */,
 				1530D58C1BD7384F0065634B /* TSJsonData.m in Sources */,
 				152751D51BD5FF9F00DE44F1 /* UIView+WebCacheOperation.m in Sources */,
 				156FF7311BD5E61C00D37EB4 /* UIAlertView+alertError.m in Sources */,
@@ -723,7 +757,9 @@
 				152751CF1BD5FF9F00DE44F1 /* UIButton+WebCache.m in Sources */,
 				152751D41BD5FF9F00DE44F1 /* UIImageView+WebCache.m in Sources */,
 				156FF6FC1BD4E90B00D37EB4 /* HJSNavigationViewController.m in Sources */,
+				15D3CF141BD8F4DE006163A5 /* SWSResultModel.m in Sources */,
 				156FF7281BD5E38200D37EB4 /* AFNetworkReachabilityManager.m in Sources */,
+				15D3CE721BD87C58006163A5 /* SWSCarNewsCell.m in Sources */,
 				152751D01BD5FF9F00DE44F1 /* UIImage+GIF.m in Sources */,
 				152751CB1BD5FF9F00DE44F1 /* SDWebImageDownloader.m in Sources */,
 				156FF72D1BD5E38200D37EB4 /* AFURLSessionManager.m in Sources */,
