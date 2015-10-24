@@ -87,7 +87,6 @@
         _scrollView.showsVerticalScrollIndicator = YES;
         _scrollView.delegate = self;
         [_scrollView setContentOffset:CGPointMake(self.width, 0) animated:NO];
-        
     }
     return _scrollView;
 }
@@ -100,9 +99,8 @@
         _pageControl.numberOfPages = _imagesArray.count - 2;
         _pageControl.currentPage = 0;
 
-        [_pageControl setValue:[UIImage imageNamed:@"sale_pictureswitch_over"] forKey:@"_currentPageImage"];
-        [_pageControl setValue:[UIImage imageNamed:@"sale_pictureswitch"] forKey:@"_pageImage"];
-
+        [_pageControl setValue:[UIImage imageNamed:@"startGuide_page_curent"] forKey:@"_currentPageImage"];
+        [_pageControl setValue:[UIImage imageNamed:@"startGuide_page_default"] forKey:@"_pageImage"];
     }
     return _pageControl;
 }

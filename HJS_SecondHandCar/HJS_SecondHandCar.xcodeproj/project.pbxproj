@@ -76,6 +76,8 @@
 		156FF7341BD5E87B00D37EB4 /* TSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7331BD5E87B00D37EB4 /* TSBaseModel.m */; };
 		156FF7371BD5E96100D37EB4 /* SWSResultMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7361BD5E96100D37EB4 /* SWSResultMode.m */; };
 		156FF73A1BD5E97500D37EB4 /* SWSCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FF7391BD5E97500D37EB4 /* SWSCarModel.m */; };
+		15A21ACB1BDB1DE5002A5855 /* TSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A21ACA1BDB1DE5002A5855 /* TSScrollView.m */; };
+		15A21B361BDB2948002A5855 /* headerScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A21B351BDB2948002A5855 /* headerScrollView.xib */; };
 		15D3CE231BD789EA006163A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D3CE221BD789EA006163A5 /* Images.xcassets */; };
 		15D3CE6F1BD87ADD006163A5 /* SWSStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3CE6E1BD87ADD006163A5 /* SWSStrategyViewController.m */; };
 		15D3CE721BD87C58006163A5 /* SWSCarNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3CE711BD87C58006163A5 /* SWSCarNewsCell.m */; };
@@ -239,6 +241,9 @@
 		156FF7361BD5E96100D37EB4 /* SWSResultMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSResultMode.m; sourceTree = "<group>"; };
 		156FF7381BD5E97500D37EB4 /* SWSCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSCarModel.h; sourceTree = "<group>"; };
 		156FF7391BD5E97500D37EB4 /* SWSCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSCarModel.m; sourceTree = "<group>"; };
+		15A21AC91BDB1DE5002A5855 /* TSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSScrollView.h; sourceTree = "<group>"; };
+		15A21ACA1BDB1DE5002A5855 /* TSScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSScrollView.m; sourceTree = "<group>"; };
+		15A21B351BDB2948002A5855 /* headerScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = headerScrollView.xib; sourceTree = "<group>"; };
 		15D3CE221BD789EA006163A5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		15D3CE6D1BD87ADD006163A5 /* SWSStrategyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSStrategyViewController.h; sourceTree = "<group>"; };
 		15D3CE6E1BD87ADD006163A5 /* SWSStrategyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSStrategyViewController.m; sourceTree = "<group>"; };
@@ -447,6 +452,8 @@
 				152751DB1BD635EE00DE44F1 /* TSHUDPrompt.m */,
 				15D3CEDA1BD8C399006163A5 /* UIColor+randomColor.h */,
 				15D3CEDB1BD8C399006163A5 /* UIColor+randomColor.m */,
+				15A21AC91BDB1DE5002A5855 /* TSScrollView.h */,
+				15A21ACA1BDB1DE5002A5855 /* TSScrollView.m */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -610,6 +617,7 @@
 				15D3CE711BD87C58006163A5 /* SWSCarNewsCell.m */,
 				151B83AF1BD9DD5800BAE394 /* StrategyFirstCell.xib */,
 				151B83B11BD9DD7400BAE394 /* StrategySecondCell.xib */,
+				15A21B351BDB2948002A5855 /* headerScrollView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -787,6 +795,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A21B361BDB2948002A5855 /* headerScrollView.xib in Resources */,
 				1530D5891BD737AB0065634B /* ProvinceLocation.json in Resources */,
 				15D3CE231BD789EA006163A5 /* Images.xcassets in Resources */,
 				151B83B01BD9DD5800BAE394 /* StrategyFirstCell.xib in Resources */,
@@ -859,6 +868,7 @@
 				152751C61BD5FF9F00DE44F1 /* MKAnnotationView+WebCache.m in Sources */,
 				152751C71BD5FF9F00DE44F1 /* NSData+ImageContentType.m in Sources */,
 				151B83D01BD9F3C500BAE394 /* MASConstraint.m in Sources */,
+				15A21ACB1BDB1DE5002A5855 /* TSScrollView.m in Sources */,
 				152751CF1BD5FF9F00DE44F1 /* UIButton+WebCache.m in Sources */,
 				152751D41BD5FF9F00DE44F1 /* UIImageView+WebCache.m in Sources */,
 				156FF6FC1BD4E90B00D37EB4 /* HJSNavigationViewController.m in Sources */,

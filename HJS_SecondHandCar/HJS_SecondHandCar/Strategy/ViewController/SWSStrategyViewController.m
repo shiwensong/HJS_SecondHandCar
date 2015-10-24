@@ -12,6 +12,7 @@
 #import "SWSResultModel.h"
 #import "DetailModel.h"
 #import "StrategyDetaileViewController.h"
+#import "TSScrollView.h"
 
 static NSString * const FirstCellId = @"StrategyFirstCell";
 static NSString * const SecondCellId = @"StrategySecondCell";
@@ -137,6 +138,31 @@ static NSString * const SecondCellId = @"StrategySecondCell";
     DetailModel *model = self.detailModelArray[indexPath.row];
     viewController.URLString = model.url;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    if (self.pageType != 0) {
+        return nil;
+    }
+    
+    TSScrollView *headerScrollView = [[TSScrollView alloc] initWithFrame:CGRectMake(0, 0, TScreenWidth, 200)];
+    headerScrollView.backgroundColor = [UIColor yellowColor];
+    
+    NSArray *imageURLs = @[ScrollViewFirstImage,ScrollViewSecondImage,ScrollViewThreeImage];
+    NSArray *titles = @[@"明骚小钢炮 家认证二手尚酷实拍",
+                        @"二手2010款路虎神行者2实拍",
+                        @"家家好车帮我卖掉了POLO"];
+    [headerScrollView headerViewWithImageURLs:imageURLs titles:titles];
+
+    return headerScrollView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (self.pageType != 0) {
+        return 0;
+    }
+    return 200;
 }
 
 #pragma mark - Custom AccessorY

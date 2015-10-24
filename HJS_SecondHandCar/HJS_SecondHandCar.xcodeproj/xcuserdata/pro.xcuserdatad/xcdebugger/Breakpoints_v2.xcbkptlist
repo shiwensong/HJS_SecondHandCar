@@ -29,11 +29,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HJS_SecondHandCar/Strategy/ViewController/HJSStrategyViewController.m"
-            timestampString = "467298300.766406"
+            timestampString = "467340899.677268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-dealloc"
             landmarkType = "5">
          </BreakpointContent>

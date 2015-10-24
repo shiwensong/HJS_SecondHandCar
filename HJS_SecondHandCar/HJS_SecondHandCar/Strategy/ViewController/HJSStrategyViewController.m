@@ -38,9 +38,6 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-
-    self.scrollView.backgroundColor = [UIColor orangeColor];
-    
     [self loadResultModelDatas];
 }
 
@@ -72,16 +69,14 @@
 //    NSLog(@"height == %f", height);
     self.scrollView.contentSize = CGSizeMake(TScreenWidth * 4, height);
     //添加我们的tableView
-    self.scrollView.showsHorizontalScrollIndicator = YES;
-    self.scrollView.showsVerticalScrollIndicator = YES;
+//    self.scrollView.showsHorizontalScrollIndicator = YES;
+//    self.scrollView.showsVerticalScrollIndicator = YES;
     for (int i = 0; i < 4; i ++) {
         
         SWSStrategyViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SWSStrategyViewController"];
         viewController.view.frame = CGRectMake(TScreenWidth * i, 0 , TScreenWidth, height);
         viewController.pageType = i;
         [self.viewControllers addObject:viewController];
-        viewController.tableView.backgroundColor = [UIColor randomColor];
-//        viewController.model = self.resultModels[i];
         [self.scrollView addSubview:viewController.view];
         [self addChildViewController:viewController];
         
@@ -139,6 +134,7 @@
     _beginOffSet = (int)scrollView.contentOffset.x;
 }
 
+//计算出我们的页面是往那边滚动的，然后计算出，下一个页面的下标，然后根据下标，取出当前的ViewController，然后进行一系列的刷新操作
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     CGFloat offset = scrollView.contentOffset.x;
@@ -147,7 +143,7 @@
 
     if (-x > TScreenWidth/2.0) {
         if (!isContinue) {
-            int page = offset/TScreenWidth;
+            int page = offset/TScreenWidth;//这里的page是我们的页面的下标，与我们的数组下标匹配
             //            NSLog(@"第%d页", page);
             SWSStrategyViewController *viewController = self.viewControllers[page];
             [viewController refreshData];

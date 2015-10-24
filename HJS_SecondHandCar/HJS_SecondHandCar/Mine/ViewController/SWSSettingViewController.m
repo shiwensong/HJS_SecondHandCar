@@ -25,6 +25,41 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Private
+
+//计算出缓存文件的大小 （NSCachesDirectory目录下的文件大小）
+- (CGFloat)computeFileTotalSize
+{
+    NSString *homeFilePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSFileManager *fileManger = [NSFileManager defaultManager];
+    NSArray *subFilePathArray = [fileManger subpathsAtPath:homeFilePath];
+    
+    long long totalSize = 0;
+    for (NSString *path  in subFilePathArray) {
+        NSString *filePath = [homeFilePath stringByAppendingPathComponent:path];
+        NSDictionary *dict = [fileManger attributesOfItemAtPath:filePath error:nil];
+        long filesize = [[dict valueForKey:NSFileSize] longValue];
+        
+        totalSize += filesize;
+    }
+    
+    return (CGFloat)totalSize / 1024 / 1024;
+}
+
+//清理我们的缓存文件
+- (void)clearCachesFile
+{
+    NSString *homeFilePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *subFilePathArray = [fileManager subpathsAtPath:homeFilePath];
+    for (NSString *path in subFilePathArray) {
+        NSString *filePath = [homeFilePath stringByAppendingPathComponent:path];
+        
+        [fileManager removeItemAtPath:filePath error:nil];
+    }
+}
+
 #pragma mark - IBAction
 
 - (IBAction)backToMinepageButtonAction:(UIButton *)sender {
@@ -37,10 +72,29 @@
 
 #pragma mark - UITableViewDataSource
 
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UILabel *lable = (UILabel *)[cell viewWithTag:10];
+    
+    lable.text  = [NSString stringWithFormat:@"%.1f M",[self computeFileTotalSize]];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 30;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 1 ) {
+        [self clearCachesFile];
+        [TSHUDPrompt hudPromptWithTitle:@"清理完成" withImageName:@"has_been_sent" withSuperView:self.view withAfterDelay:1];
+    }
+    [tableView reloadData];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 
 #pragma mark - UICollectionViewDataSource
 
@@ -72,6 +126,8 @@
 {
     return UIEdgeInsetsMake(10,10 , 0, 0);
 }
+
+
 
 
 @end
