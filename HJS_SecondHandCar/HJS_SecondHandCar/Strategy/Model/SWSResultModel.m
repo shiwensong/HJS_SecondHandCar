@@ -23,18 +23,19 @@
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
-    NSLog(@"--------%@",value);
     if ([key isEqualToString:@"articlelist"]) {
-//        NSLog(@"%@",value);
+
         NSArray *array = (NSArray *)value;
         for (NSDictionary *dictionary  in array) {
+//            NSLog(@"dictionary ==%@",dictionary);
             DetailModel *model = [DetailModel modelWithDictionary:dictionary];
             [self.detailModelArray addObject:model];
-            
-            NSLog(@"%@",self.detailModelArray);
         }
+        
+        NSLog(@"%@",self.detailModelArray);
     }
 }
+
 
 #pragma mark - Custom accessor
 

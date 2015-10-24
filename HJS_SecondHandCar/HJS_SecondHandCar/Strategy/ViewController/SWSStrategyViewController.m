@@ -11,10 +11,15 @@
 #import "SWSCarNewsCell.h"
 #import "SWSResultModel.h"
 #import "DetailModel.h"
+#import "StrategyDetaileViewController.h"
+
+static NSString * const FirstCellId = @"StrategyFirstCell";
+static NSString * const SecondCellId = @"StrategySecondCell";
+
 
 @interface SWSStrategyViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) SWSResultModel *resultModel;
+@property (strong, nonatomic) NSMutableArray *detailModelArray;
 
 @end
 
@@ -22,9 +27,32 @@
 
 #pragma mark - Lifecycle
 
+- (void)refreshData {
+
+    switch (self.pageType) {
+        case 0: {
+            [self LoadViewControllerData:SWSStrategyAllArticleURL];
+            break;
+        }
+        case 1:
+            [self LoadViewControllerData:SWSBuyCarCommonSenseURL];
+            break;
+        case 2:
+            [self LoadViewControllerData:SWSLawsAndRegulationsURL];
+            break;
+        case 3:
+            [self LoadViewControllerData:SWSIndustryInformationURL];
+            break;
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadStrategyNewDatas];
+
+    //cell注册
+    [self.tableView registerNib:[UINib nibWithNibName:@"StrategyFirstCell" bundle:nil] forCellReuseIdentifier:FirstCellId];
+    [self.tableView registerNib:[UINib nibWithNibName:@"StrategySecondCell" bundle:nil] forCellReuseIdentifier:SecondCellId];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,26 +66,40 @@
 
 #pragma mark - Private
 
-- (void)loadStrategyNewDatas{
+//设置我们cell的值
+- (void)setCellDatas:(SWSCarNewsCell *)cell withIndexPath:(NSIndexPath *)indexPath{
     
-    
-    [TSHttpRequest requestURL:SWSStrategyAllArticleURL parameters:nil requestType:RequesetIsGET success:^(id result) {
-        
-        self.resultModel = [[SWSResultModel alloc] initWithDictionary:result[@"result"]];
+    DetailModel *model = self.detailModelArray[indexPath.row];
+    if (model.imgurl != nil) {
+        [cell.newsImageView sd_setImageWithURL:[NSURL URLWithString:model.imgurl]];
+    }else {
+        cell.newsImageView = nil;
+    }
+    cell.titleLabel.text = model.articletitle;
+    cell.subTitleLabel.text = model.classname;
+    cell.dateLable.text = model.articlepublishdate;
+}
+
+
+//加载我们的数据
+- (void)LoadViewControllerData:(NSString *)URLString {
+    [TSHttpRequest  requestURL:URLString parameters:nil requestType:RequesetIsGET success:^(id result) {
+        if (self.detailModelArray.count > 0) {
+            [self.detailModelArray removeAllObjects];
+        }
+        NSArray *array = result[@"result"][@"articlelist"];
+        for (NSDictionary *dictionary  in array) {
+            DetailModel *model = [DetailModel modelWithDictionary:dictionary];
+            [self.detailModelArray addObject:model];
+        }
+
+        [self.tableView reloadData];
         
     } failure:^(id error) {
         [UIAlertView alertErrorView];
     }];
     
-    [self.tableView reloadData];
-}
-
-//设置我们cell的值
-- (void)setCellDatas:(SWSCarNewsCell *)cell withIndexPath:(NSIndexPath *)indexPath{
-    DetailModel *model = self.resultModel.detailModelArray[indexPath.row];
-    [cell.newsImageView sd_setImageWithURL:[NSURL URLWithString:model.imgurl]];
-    cell.titleLabel.text = model.articleintroduce;
-    cell.subTitleLabel.text = model.articletitle;
+    
 }
 
 
@@ -66,14 +108,44 @@
 #pragma mark - UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.resultModel.detailModelArray.count;
+    
+    return self.detailModelArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    DetailModel *model = self.detailModelArray[indexPath.row];
+    SWSCarNewsCell *cell = nil;
+    if (model.imgurl) {
+       
+        cell = [tableView dequeueReusableCellWithIdentifier:FirstCellId forIndexPath:indexPath];
+    }else{
+        cell = [tableView dequeueReusableCellWithIdentifier:SecondCellId forIndexPath:indexPath];
+    }
     
-    SWSCarNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SWSCarNewsCell" forIndexPath:indexPath];
     [self setCellDatas:cell withIndexPath:indexPath];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 70;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    StrategyDetaileViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StrategyDetaileViewController"];
+    [self.navigationController pushViewController:viewController animated:YES];
+    DetailModel *model = self.detailModelArray[indexPath.row];
+    viewController.URLString = model.url;
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Custom AccessorY
+
+-(NSMutableArray *)detailModelArray{
+    if (_detailModelArray == nil) {
+        _detailModelArray = [NSMutableArray array];
+    }
+    return _detailModelArray;
 }
 
 @end

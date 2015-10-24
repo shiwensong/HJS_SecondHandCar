@@ -7,6 +7,8 @@
 //
 
 #import "HJSMineViewController.h"
+#import "SWSSettingViewController.h"
+
 
 @interface HJSMineViewController ()
 
@@ -24,6 +26,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - IBAction
+
+- (IBAction)settingButtonAction:(UIButton *)sender {
+    
+    SWSSettingViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SWSSettingViewController"];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+
 
 #pragma mark - UITableViewDataSource && UITableViewDelegate
 
@@ -32,5 +43,10 @@ heightForHeaderInSection:(NSInteger)section {
     
     return CGFLOAT_MIN;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 
 @end

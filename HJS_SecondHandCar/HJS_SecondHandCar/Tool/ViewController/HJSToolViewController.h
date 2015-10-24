@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HJSToolViewController : BasicViewController
+@interface HJSToolViewController : UITableViewController
 
 
 @end

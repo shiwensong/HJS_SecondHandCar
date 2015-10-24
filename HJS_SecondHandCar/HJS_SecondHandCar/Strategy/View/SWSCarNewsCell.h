@@ -15,4 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *dateLable;
+
+
 @end
