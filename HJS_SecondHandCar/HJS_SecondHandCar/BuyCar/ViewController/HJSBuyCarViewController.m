@@ -12,9 +12,15 @@
 #import "CarInfoCell.h"
 #import "SWSWebDetailViewController.h"
 #import "SWSModelViewController.h"
+#import "BaiduMapViewController.h"
+#import "ChildViewController.h"
+#import "MJRefresh.h"
 
-@interface HJSBuyCarViewController () <UITableViewDataSource, UITableViewDelegate,UISearchBarDelegate,UISearchControllerDelegate>
 
+@interface HJSBuyCarViewController () <UITableViewDataSource, UITableViewDelegate,UISearchBarDelegate,UISearchControllerDelegate,ChiledViewControllerDelegate>
+{
+    BOOL isSelected;
+}
 @property (weak, nonatomic) IBOutlet UITableView *buyCarTableView;
 
 @property (weak, nonatomic) IBOutlet UIView *sortBgView;
@@ -25,6 +31,8 @@
 
 @property (weak, nonatomic) IBOutlet UISearchBar *mysearchBar;
 
+//保存我们定位的按钮
+@property (weak, nonatomic) IBOutlet UIButton *placeLocationButon;
 
 
 @end
@@ -36,10 +44,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self loadCarDatas];
+
     [self setSortbgViewSetting];
 
     self.navigationItem.titleView = self.mysearchBar;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeLocationButtonSelected) name:@"pageBack" object:nil];
+
+    [self addDownRefreshView];
+    
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,9 +64,15 @@
     
     [self.view removeFromSuperview];
     [self removeFromParentViewController];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Private
+
+- (void)changeLocationButtonSelected{
+    isSelected = NO;
+}
 
 
 - (void)loadCarDatas{
@@ -67,11 +87,29 @@
         }
     } failure:^(id error) {
         [UIAlertView alertErrorView];
+        [self.buyCarTableView.header endRefreshing];
+
     }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.buyCarTableView.header endRefreshing];
+    });
+
 }
 
 - (void)setSortbgViewSetting{
     self.sortBgView.alpha = 0.8;
+}
+
+
+//下拉加载更多，刷新
+- (void)addDownRefreshView{
+    
+    self.buyCarTableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadCarDatas)];
+    
+    [self.buyCarTableView.header beginRefreshing];
+    
+    
 }
 
 #pragma mark - IBAction
@@ -79,7 +117,14 @@
 //这是控制器左上角的定位按钮
 - (IBAction)locationPlaceAction:(UIButton *)sender {
     
-    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChildViewController"];
+    if (isSelected) {
+        return;
+    }
+    isSelected = YES;
+    
+    ChildViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChildViewController"];
+    viewController.delegate = self;
+    
     CGRect frame = self.view.bounds;
     frame.origin.x = CGRectGetWidth(frame);
     viewController.view.frame = frame;
@@ -99,7 +144,16 @@
 }
 
 
-#pragma mark - Protol Group
+- (IBAction)baiduMapLocationPlaceAction:(UIButton *)sender {
+    
+    BaiduMapViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BaiduMapViewController"];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+    
+}
+
+
+#pragma mark - Protol GroupY
 
 #pragma mark - UITableViewDataSource
 
@@ -160,17 +214,17 @@
     [self presentViewController:viewController animated:YES completion:nil];
     
     return NO;
-}                      // return NO to not become first responder
-//- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar;                     // called when text starts editing
-//- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar;                        // return NO to not resign first responder
-//- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar;                       // called when text ends editing
-//- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;   // called when text changes (including clear)
-//- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text NS_AVAILABLE_IOS(3_0); // called before text changes
-//
-//- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;                     // called when keyboard search button pressed
-//- (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar;                   // called when bookmark button pressed
-//- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar;                     // called when cancel button pressed
-//- (void)searchBarResultsListButtonClicked:(UISearchBar *)searchBar NS_AVAILABLE_IOS(3_2);
+}          
+
+#pragma mark - ChiledViewControllerDelegate
+
+- (void)locationButtonTitle:(NSString *)title{
+
+    if (title.length > 3) {
+        title = [title substringToIndex:2];
+    }
+    [self.placeLocationButon setTitle:title forState:UIControlStateNormal];
+}
 
 #pragma mark - Custom Accessor
 
@@ -180,7 +234,5 @@
     }
     return _modelsArray;
 }
-
-
 
 @end

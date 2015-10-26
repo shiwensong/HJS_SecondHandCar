@@ -48,6 +48,8 @@
 {
     self.width = TScreenWidth;
     self.height = self.frame.size.height;
+    
+    NSLog(@"%s %@", __func__, NSStringFromCGRect(self.frame));
 }
 
 
@@ -91,14 +93,21 @@
     return _scrollView;
 }
 
+- (void)layoutSubviews {
+    
+    _pageControl.frame =CGRectMake(0, self.height - 20, self.width, 20);
+
+}
 
 - (UIPageControl *)pageControl
 {
     if (_pageControl == nil) {
-        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake((TScreenWidth - 100)/2, self.height - 20, 100, 20)];
+        _pageControl = [[UIPageControl alloc] init];
         _pageControl.numberOfPages = _imagesArray.count - 2;
         _pageControl.currentPage = 0;
 
+        NSLog(@"%s %@", __func__, NSStringFromCGRect(self.frame));
+        
         [_pageControl setValue:[UIImage imageNamed:@"startGuide_page_curent"] forKey:@"_currentPageImage"];
         [_pageControl setValue:[UIImage imageNamed:@"startGuide_page_default"] forKey:@"_pageImage"];
     }
@@ -147,11 +156,6 @@
     }
     
 }
-
-
-
-
-
 
 #pragma  mark - UIScrollViewDelegate
 

@@ -31,20 +31,23 @@
 //明骚小钢炮
 
 #define ScrollViewFirstImage @"http://2sc1.m.autoimg.cn/2scimg/che168focusimage/2015/10/19/5110601246768710650.jpg"
-//@"http://m.app.che168.com/strategy/852682.html?isapp=1"
+#define FirstImageURL @"http://m.app.che168.com/strategy/852682.html?isapp=1"
 
 
 
 ////路虎
 
 #define ScrollViewSecondImage @"http://2sc1.m.autoimg.cn/2scimg/che168focusimage/2015/10/12/5535123260989968007.jpg"
-//@"http://m.app.che168.com/strategy/852676.html?isapp=1"
+#define SecondImageURL @"http://m.app.che168.com/strategy/852676.html?isapp=1"
 
 
 ////宝马
 #define ScrollViewThreeImage @"http://2sc1.m.autoimg.cn/2scimg/che168focusimage/2015/10/15/5595082514518304347.jpg"
+#define ThreeImageURL @"http://m.app.che168.com/strategy/852672.html?isapp=1"
 
 
 
+//卖车页面的商人卖车链接
+#define SellCarBusinessManURL @"http://appdownload.autohome.com.cn/usedcar/chezhiying.html"
 
 #endif

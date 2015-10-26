@@ -56,7 +56,9 @@
 
 - (IBAction)merchantSellCarAction:(UIButton *)sender {
     
-    
+    SWSWebDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SWSWebDetailViewController"];
+    viewController.URLString =  SellCarBusinessManURL;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (IBAction)personSellCarAction:(UIButton *)sender {

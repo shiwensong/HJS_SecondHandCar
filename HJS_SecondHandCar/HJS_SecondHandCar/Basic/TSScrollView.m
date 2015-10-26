@@ -46,6 +46,8 @@
     if (self) {
         self.width = TScreenWidth;
         self.height = self.frame.size.height;
+        
+        [self creatTapGesture];
     }
     return self;
 }
@@ -55,6 +57,8 @@
 {
     self.width = TScreenWidth;
     self.height = self.frame.size.height;
+    
+    [self creatTapGesture];
 }
 
 
@@ -99,7 +103,10 @@
 
 - (void)tapAction:(UITapGestureRecognizer *)tap
 {
-    [self.delegate tapHeaderViewWithCurrentPage:self.pageControl.currentPage];
+    if ([self.delegate respondsToSelector:@selector(tapHeaderViewWithCurrentPage:)]) {
+        
+        [self.delegate tapHeaderViewWithCurrentPage:self.pageControl.currentPage];
+    }
 }
 
 

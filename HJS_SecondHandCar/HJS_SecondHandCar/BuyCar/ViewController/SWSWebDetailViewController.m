@@ -28,7 +28,6 @@
     NSURLRequest *request =[NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
     
-    
     //设置titleView的字体颜色
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
 
@@ -39,13 +38,14 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Custom Accessor
+#pragma mark - IBAction
 
-//这是我们自定义的返回按钮，触发的方法
-- (IBAction)backHomeButtonAction:(UIButton *)sender {
+//分享朋友圈
+- (IBAction)shareFirendCircle:(UIButton *)sender {
     
-    [self.navigationController popViewControllerAnimated:YES];
+    
 }
+
 
 
 #pragma mark - Protol Group
@@ -88,6 +88,10 @@
 }
 
 
-//screening_shadow_r@2x   竖线
+//这是我们自定义的返回按钮，触发的方法
+- (IBAction)backHomeButtonAction:(UIButton *)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

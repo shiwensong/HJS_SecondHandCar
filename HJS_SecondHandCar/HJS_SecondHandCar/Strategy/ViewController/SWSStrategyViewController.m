@@ -13,14 +13,17 @@
 #import "DetailModel.h"
 #import "StrategyDetaileViewController.h"
 #import "TSScrollView.h"
+#import "SWSWebDetailViewController.h"
 
 static NSString * const FirstCellId = @"StrategyFirstCell";
 static NSString * const SecondCellId = @"StrategySecondCell";
 
 
-@interface SWSStrategyViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface SWSStrategyViewController () <UITableViewDataSource, UITableViewDelegate, TSTSScrollViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *detailModelArray;
+
+@property (strong, nonatomic) NSArray *bannerLinkURLs ;
 
 @end
 
@@ -53,6 +56,9 @@ static NSString * const SecondCellId = @"StrategySecondCell";
     //cell注册
     [self.tableView registerNib:[UINib nibWithNibName:@"StrategyFirstCell" bundle:nil] forCellReuseIdentifier:FirstCellId];
     [self.tableView registerNib:[UINib nibWithNibName:@"StrategySecondCell" bundle:nil] forCellReuseIdentifier:SecondCellId];
+    
+    
+    self.bannerLinkURLs = @[FirstImageURL,SecondImageURL,ThreeImageURL];
 
 }
 
@@ -147,8 +153,7 @@ static NSString * const SecondCellId = @"StrategySecondCell";
     }
     
     TSScrollView *headerScrollView = [[TSScrollView alloc] initWithFrame:CGRectMake(0, 0, TScreenWidth, 200)];
-    headerScrollView.backgroundColor = [UIColor yellowColor];
-    
+    headerScrollView.delegate = self;
     NSArray *imageURLs = @[ScrollViewFirstImage,ScrollViewSecondImage,ScrollViewThreeImage];
     NSArray *titles = @[@"明骚小钢炮 家认证二手尚酷实拍",
                         @"二手2010款路虎神行者2实拍",
@@ -163,6 +168,17 @@ static NSString * const SecondCellId = @"StrategySecondCell";
         return 0;
     }
     return 200;
+}
+
+
+
+- (void)tapHeaderViewWithCurrentPage:(NSInteger)currentPage
+{
+     SWSWebDetailViewController *newsDetailCol = [self.storyboard instantiateViewControllerWithIdentifier:@"SWSWebDetailViewController"];
+    
+    newsDetailCol.URLString = _bannerLinkURLs[currentPage];
+    
+    [self.navigationController pushViewController:newsDetailCol animated:YES];
 }
 
 #pragma mark - Custom AccessorY

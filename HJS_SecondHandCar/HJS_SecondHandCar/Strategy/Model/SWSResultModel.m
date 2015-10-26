@@ -31,8 +31,6 @@
             DetailModel *model = [DetailModel modelWithDictionary:dictionary];
             [self.detailModelArray addObject:model];
         }
-        
-        NSLog(@"%@",self.detailModelArray);
     }
 }
 

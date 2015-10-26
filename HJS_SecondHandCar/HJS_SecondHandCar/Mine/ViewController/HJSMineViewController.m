@@ -12,6 +12,9 @@
 
 @interface HJSMineViewController ()
 
+//拨打电话
+- (IBAction)callPhoneOnCilick:(UIButton *)sender;
+
 @end
 
 @implementation HJSMineViewController
@@ -34,7 +37,10 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
-
+- (IBAction)callPhoneOnCilick:(UIButton *)sender {
+    
+     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://010-59851369"]];
+}
 
 #pragma mark - UITableViewDataSource && UITableViewDelegate
 
@@ -47,6 +53,7 @@ heightForHeaderInSection:(NSInteger)section {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
 
 
 @end
